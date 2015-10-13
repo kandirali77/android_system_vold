@@ -20,7 +20,7 @@ ifeq ($(BOARD_VOLD_CRYPTFS_MIGRATE), true)
 common_cflags += -DCRYPTFS_MIGRATE
 endif
 
-common_cflags += -Werror
+common_cflags += -Werror -Wno-error=unused-parameter -Wno-error=shadow -Wno-error=suggest-attribute=noreturn
 
 common_src_files := \
 	VolumeManager.cpp \
